@@ -15,7 +15,7 @@ public class Locators {
         driver.manage().window().maximize();//maximize the window
 
         WebElement firstName= driver.findElement(By.id("first_name"));//locate the WebElement first name
-        firstName.sendKeys("michelle");//enter the data you want,use sned keys to send the data tp webelement
+        firstName.sendKeys("michelle");//enter the data you want,use send keys to send the data tp webelement
 
         WebElement lastName= driver.findElement(By.name("last_name"));//locate the webElement last name
         lastName.sendKeys("hurtado");

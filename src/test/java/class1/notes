@@ -1,0 +1,84 @@
+how many ways to tests?
+    2, manual and auto
+why manual is not good?
+    too much time
+
+how/ what tools do we use to auto a website?
+    4 diff one but we using *selenium
+what is selenium?
+    a tool that helps us to automate webApplications
+
+
+how do we integrate selenium into our project?
+    1.Maven project
+    2.
+the url is https://
+
+
+get() vs navigate()
+both serves the same purpose
+
+get()--cant go back or forward in history
+navigate()-- you can go back and forward and refresh
+
+get()--it waits for the whole page to load
+nag()--it doesn't wait for the whole page to load
+
+close()--close the current tab
+quiz()--quit the whole browser
+
+fullscreen() vs maximize()
+-- maximize() will maximize the browser and you will still be able to see url, tabs, bookmarks
+    and fullscreen() will maximize the whole web application
+
+tag name= is only 1 word
+
+WebElements: whatever you see on a website--button , image, etc
+
+DOM---Document Object Model
+**********************************************************
+
+
+    What is a WebElement?
+    anything we see on the web page is considered to be a webelement
+    e.g. buttons, textboxes, checkboxes, links
+
+    HTML?
+    HyperText Markup Language
+
+    What is DOM?
+    DOM stands for Document Object Model. It is the browser's
+    internal view of the webpage.
+    Also called as Developer's tools, or Dev tools
+    Document --> can be stored any document as pdf, excel
+    Object --> any line in HTML is considered as Object
+    Model --> it is just a layout of the HTML
+
+    Locator
+    is an address or a position of an webelement on the web page
+    is used to locate or identify webelements on the webpage
+
+    8 Locators:
+    - ID
+    - Name
+    - Tagname
+    - xpath
+    - linktext
+    - partialLinkText
+    - CSS Selector
+    - ClassName
+
+
+    Why do we need many locators?
+    -- some locators might have duplicate values in other nodes
+    -- Developers may not provide all the locators for all the elements
+
+
+
+    <button>click me</button>
+    a text is always located betweeen >< of the tag (i.e opening and closing of the tag
+    the above tag has text
+
+    <a href="g"></a>
+    the above tag has no text
+

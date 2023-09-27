@@ -29,7 +29,7 @@ quiz()--quit the whole browser
 
 fullscreen() vs maximize()
 -- maximize() will maximize the browser and you will still be able to see url, tabs, bookmarks
-    and fullscreen() will maximize the whole web application
+   fullscreen() will maximize the whole web application
 
 tag name= is only 1 word
 

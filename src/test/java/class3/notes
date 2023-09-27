@@ -1,0 +1,80 @@
+html formater on google to help you formate
+
+/ --that means go to
+
+Last 2 locators
+1.Absolute Xpath:
+    reason why they done use it that much
+    1. the path may change if any change is made in the document
+    2. its too long
+
+    ex.
+    <html>
+        <body>
+            <input>--input is a dead end
+            <p>hello</p>
+        </body>
+    </html>
+
+/html/body/p/  ---this is how you would write it above the code
+
+2. Relative Xpath
+Syntax:
+    //tagname[@attribute='value']
+    hey het me as tagname "which has attribute" "whose vaule is"
+
+    //link[@rel='stylesheet']
+    hey get me the tagname "link" which has an attribute"
+
+
+you can find an element using
+
+attribute: most common
+    we can use any attribute, provided that it doesnt have numbers, spaces, and is unique enough
+
+    //tagname[@attribute='value']
+
+text: most common
+    the element must have text
+    //tagname[text()='value']
+
+contains method:
+    we can use partial vaule of attribute or text. This is helpful when we have no other opinion
+    and all the available attributes have either digits or spaces don't put numbers
+
+    attribute //tagname[contains(@name,'value')]
+
+    text//tagname[contains(text(),'value')]
+
+startswith:
+has to begin with that value or
+
+    attribute //tagname[starts-with(@attribute,'value')]
+
+    test//tagname[starts-with(text(),'value')]
+
+indexing:
+    should be the last resort when you have no other option to select the element uniquely
+
+    (xpath)[index]//tagname[@attribute='value'])[index]
+
+use of and operator: common
+    we can use and operator to specify more then one condition for our element, to locate it uniquley
+
+    //tagname[@attribute='value' and @attribute='value']
+
+
+****************************************************************************************
+
+last locator CSS
+
+CSS doesnt allow you to access element using text
+
+syntax:
+    tagname[attribute='value']
+
+
+
+
+
+

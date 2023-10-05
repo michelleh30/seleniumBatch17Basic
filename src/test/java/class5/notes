@@ -1,0 +1,89 @@
+<a value=" ",t=" ">here</a>
+
+a: tagname
+value & t: attribute
+here: is text
+=============================================================================================================
+DropDown:
+   - does it have a select tag?   <Select>
+   if yes - use Select class in selenium to deal with it
+   if no - deal with it like a normal Web Element
+
+If  <Select>:
+   1. Locate the  element DropDown the select tag using appropriate locator
+   2. Create an Obj of Select class and pass in the Web element in parameters
+        we are going to pass the dropdown
+   3. Use method from Select class to select the desired option:
+          .byVisibleText();
+          .byIndex(); indexing in DD starts from 0!
+          .byValue();
+
+Multi Select DD:
+   1. Locate WebElement;
+
+   2. Create an Obj of Select class and pass in the Web element;
+
+   3. Use available methods to select the desired value(element):
+           .byVisibleText();
+           .byIndex(); indexing in DD starts from 0!
+           .byValue();
+
+        Additional methods for MultiSelectDD:
+           .DeselectByIndex();
+           .DeselectByVisibleText();
+           .DeselectByValue();
+
+If we want to know DD is IsMultiple() -->boolean returns true if the DD is multiSelect/have  mutil options
+
+
+hw :iterate and check if equal and select
+
+==================================================================================================================
+
+Alerts:
+   ALERTS/POP UPS:
+
+WebBased:
+    are easy to handle, we do that exact same way as we do with regular web elements, we can inspect them
+
+Window based:
+    we can't handle them using Selenium, its a outside of the web browser
+
+Java Script based alerts -
+you can only accte them
+    dealt with using Alerts class in Selenium.
+    you cant inspect them
+    switch your focus of the driver to the alert
+
+    We can with JS alerts:
+      accept();
+      dismiss();
+      sendText();
+      getText();
+
+            Handling alerts:
+
+  driver.switchToAlert()- will switch the focus to alert;
+   alert.accept();
+   alert.dismiss();
+
+=================================================================================================================================================================
+Alert alert=driver.switchTo.alert()                                                     driver.switchTo.alter().accept()
+                                ------- these to code are the same thing has --->
+alert.accept();
+
+=================================================================================================================================================================
+Frames:
+    By default the focus is on the main page
+    ifame are totally different frame within a webpage.
+    iframe is a tottaly different website/window that are integrated in the main page/website
+        it can
+
+How to switch from main page to iframe
+    ex.
+        1.driver.switchTo.frame(index (or) name/id (or) the webelement);
+        2.click on click me
+        3.switch to default content
+        4.driver.switchto.frame(0)
+            sendkeys()
+

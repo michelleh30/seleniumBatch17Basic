@@ -1,0 +1,53 @@
+shouldnt use class if it has space
+dont put numbers becuase the numbers might change late and it will become error
+
+when we're using CONTAINS, we do not have to use full attribute, as long as those were digits,
+and they may change in future we omitted using them
+
+web element commands
+    sendkeys
+************************************************
+Instend of wiriting this use shortcuts
+attribute:
+     tagname[attribute='value']
+
+*Shortcuts*
+
+id:
+    tagname#value ---shortcut
+    # is only for id
+
+class:
+    tagname.value
+    if there is a space in the class, you replace that space with a dot
+
+contains:
+    tagname[attribute*='value']
+    when we're using CONTAINS, we do not have to use full attribute, as long as those were digits, and they may change in future we omitted using them
+
+start-with:
+    tagname[attribute^='value']
+
+Ends-with:
+    tagname[attribute$='value']
+
+**************************************************
+web element commands
+isSelected():
+    weather the element is selected or not
+    ---boolean
+
+isEnabled():
+    if the element is active or not
+    ---boolean
+
+isDisplay():
+    if the element is visible on screen or not
+    ---boolean
+
+isSelected and isDisplay
+    selected means has mark in the circle or not, displayed means visible or hidden
+    display - you can see
+    enabled - can you click it
+
+****************************************************************************

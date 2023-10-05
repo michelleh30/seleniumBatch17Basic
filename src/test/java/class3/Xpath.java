@@ -18,11 +18,11 @@ public class Xpath {
         WebElement textBox1= driver.findElement(By.xpath("//input[@id='title']"));
         textBox1.sendKeys("batch17");
 
-        //find the next text box and send keys
+        //find the next text box and send keys---attribute
         WebElement textBox2=driver.findElement(By.xpath("//input[@name='title']"));
         textBox2.sendKeys("batch17");
 
-        //send the security question
+        //send the security question--contains
         WebElement question1= driver.findElement(By.xpath("//input[contains(@name,'security')]"));
         question1.sendKeys("whats the color of the sun?");
 
@@ -30,7 +30,7 @@ public class Xpath {
         WebElement themagicalText= driver.findElement(By.xpath("//label[contains(text(),'Lorem')]"));
         System.out.println(themagicalText.getText());
 
-        //get the text box
+        //get the text box--starts with
         WebElement textBoxAPI= driver.findElement(By.xpath("//input[starts-with(@id,'api')]"));
         textBoxAPI.sendKeys("abracadabra");
 

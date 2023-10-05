@@ -1,0 +1,87 @@
+Selenium review:
+
+1) Initiate the instance of the WebDriver
+
+2) driver.get("url"); - doesn't keep history - waits for whole page to load
+
+   driver.navigate.to("url"); - keeps history, back forward and refresh - doesn't wait for whole page to load
+
+   navigate.refresh();
+
+   navigate.back();
+
+   navigate.forward();
+
+3) driver.quit(); - quit is going to close the whole browser
+
+   driver.close(); - close is going to close the current window
+****************************************************************************
+
+id---className---name
+    all these 3 follow apporx same approach
+        driver.findElement(By.id("box));
+        driver.findElement(By.className("box"));
+        driver.findElement(By.name("box"));
+********************************************************
+linktext && partaillinktext
+    in order to use these 2 locators condition are
+        1. element must be in the "a" tag, also called as anchor tag
+        2. there must be text present in that element
+            driver.findElement(By.linkText("createNewAccount"));
+            driver.findElement(By.partiallinkText("createNew"));
+***************************************************
+ tagName:
+    is really simple and you just need to specify tagname of that element
+    the problem is that you might find multiple element with the same tagname
+        driver.findElement(By.tagName("A"));
+
+**********************************************
+
+relative xpath:
+
+    attribute:
+        //tagname[@attibute='value'] ----- you can use any attribute is unique and fulfills other expectations
+
+    text:
+        //tagname[text()='value']---the element must have text
+
+    contains:
+        //tagname[contains(@attribute,'value')]
+                                -----you cna use contains method if there is no other attribute availble and the only availble
+                                    attribute has digits to avoid the digits you may use contains
+                                    if the value of the attribute or text is too long
+        //tagname[contain(text(),'value')}
+
+    starts-with:
+        //tagname[starts-with(@attribute,'value')]
+                                ------ the only diff between contains and starts-with is that in contains you can choose the text from any where
+                                in starts with you must choose the starting of the value
+        //tagname[starts-with(text(),'value')]
+
+    and:
+        tagname[@attribute='value' and @attribute='value']
+            we can use and to add more conditions to the Xpath in order to be able
+
+****************************************************************************************
+CSS:
+    we cant use text to locate elements when using CSS
+
+    tagname[attibute="value"]
+
+shortcuts for CSS
+
+# id :
+    tagname[id='value']---------->tagname#value // shortcut
+
+. class :
+    tagname[class='value']-------->tagname.value //
+        in order to cater space yopu can replace space with.
+
+* contains :
+    tagname[attribute*='value']
+
+^ starts-with :
+    tagname[attribute^='value']
+
+$ ends-with :
+    tagname[attribute$='value']

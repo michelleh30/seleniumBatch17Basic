@@ -1,0 +1,106 @@
+
+right click is also know contect click
+
+====================================================================
+Action class allows us to do operations such as:
+
+Hover over
+Drag and drop
+right click
+double click
+simple click
+etc
+
+use built when calling multiple methods in Actions class
+
+The build() method in Selenium is used to create a composite action
+that contains all the actions gathered which are ready to be performed.
+The perform() method is used to execute the chain of actions which are built using the
+Action build method.
+===================================================================
+
+JSExecutor:
+jsExecutor is used to execute java script code.
+
+In javascript you:
+-declare instance of Js executor ---  JavascriptException js=(JavascriptException) driver;
+-.executeScript(code to execute);
+
+
+if u want to scroll:
+1) JavascriptException js=(JavascriptException) driver;
+2) js.executeScript("window.scrollBy(0,-500)");
+================================================================
+
+SCREEN SHOT:
+1) Declare the instance of take sc
+                    TakesScreenshot ts=(TakesScreenshot) driver;
+2) Take the screen shot
+                    ts.getScreenshotAs(OutputType.file)
+
+   file format- simple file, pic you save
+   byte format - pic in representation of numbers
+
+3. Save the screenshot on pc
+    FileUtil.copyFile(filename,pth where you want to save)
+==================================================================
+Keys:
+    send keys to a webElement
+  Helps us to use mouse and keyboard actions
+
+  1. locate the webElement
+  2. webElement.sendkeys(Keys.Enter/Tab/ecs)--any keyboard key you want to use
+
+use case:
+    you want to login and need to enter the info and press enter
+    you should send keys
+
+    if a user story says that user hits enter key, you can
+======================================================================
+Action Class
+    1. declare the instance of action clas
+    2. action.(what ever action you want to do).perform();
+        action.click(WebElement).perform();
+        action.moveToElement(WebElement).perform();
+
+        When ever you chain different methods use .build at the end to build the
+        chain of actions and perform to execute them
+        action.clickAndHold.moveToElement().Releases().build().perform();
+
+usecase:
+    drag and drop, right click(context click),scroll,hover
+================================================================
+js Executor:
+    allows us to execute jva script
+    when Selenium built-in methods are not sufficient for interacting with web elements
+
+1. declare the instance
+
+2. js.executescript(script,element)
+
+From where you will get the script?--Google
+
+What is the most common jsExecutescript functionality used-- click().
+
+because sometimes the regular click operation doesn't work and at that point js click will always work
+
+use case:
+    scroll, click highlight the element boundary
+==============================================
+take screenshot:
+1. declare the instance--   TakesScreenshot ts=(TakesScreenshot)driver;
+
+2. take the screenshot--    File screenShot= ts.getScreenshotAs(OutputType.FILE);
+
+3. to save the screenshot - FileUtils.copyFile(screenShot, new File(path));
+
+
+
+
+
+Dependency needed to save the screenshot --> commons-io
+
+
+
+system.getPropery(usr.dir)
+

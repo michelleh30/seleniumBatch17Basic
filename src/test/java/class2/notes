@@ -28,9 +28,8 @@ class (classname)
 
 
 precatuions:
-what ever locator that you choose please make sure it is unqiue enough,
-we should avoid the locstors that have digits and spaces.
-
+what ever locator that you choose please make sure it is unique enough,
+we should avoid the locators that have digits and spaces.
 
 
 In case of duplicate locator:

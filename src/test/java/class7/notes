@@ -1,0 +1,115 @@
+class for dealing with frames:
+ //instance
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("http://");
+//        maximize the window
+        driver.manage().window().maximize();
+this is dynamic
+the url always changes
+***************************************************************
+OpenBrowser and lanuch App (String url){
+ //instance
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("http://url");
+        driver.get(url);
+//        maximize the window
+        driver.manage().window().maximize();
+        }
+CommonMethods
+
+===========================================================================
+Implicit wait
+
+its global wait:
+        once declared is stated its automatically implemented to all the webelements that need to be found
+
+
+    its going to wait
+        until the element is found
+
+    if element not found
+        it will return you with an exception
+
+    if element is found it will immediately on to the next piece of code
+
+syntax:
+    driver.mange().timeouts().implicitlyWait(Duration.ofSec(70));
+
+=======================================================================================
+Implict wait:
+    waits for the element to be found in DOM
+    then implicit wait will work because it is waiting for input field to appear/load in to the DOM
+
+Implicit wait is going to wait until web element is found NOT LOADED, JUST FOUND.
+Implicit wait is going to wait until web element is found (all the elements of my class)
+
+Explicit wait:
+    when there is a Conditional wait
+    for a certain condition to be fulfilled specified by user
+
+===========================================================
+martha notes
+IMPLICIT WAIT:
+
+implicit wait is going to wait until web element is found NOT LOADED, JUST FOUND in DOM.
+implict wait is hopfully when the code is not in the DOM
+
+If it's not found it will
+    return you an exception.
+
+If found - will immediately move to the next piece of code.
+    when the code is not there
+
+SYNTAX:
+  driver.manage().timeouts().implicitlyWait(Duration of seconds(20)); 20 sec here is a max time of limit
+  (Duration of seconds(20)--timeout, max time of limit that it will wait
+  20sec is good time
+
+It's a global wait:
+    ones declared in start it's automatically implemented to all the elements that are needed
+    to be found
+        ex 20sec
+
+===============================================================================================
+EXPLICIT WAIT:
+     Explicit wait waits for a certain condition to be fulfilled (e.g. is enabled) regarding the element,
+     the condition is specified by user.
+     Element is already there
+     when the code is DOM
+
+rough syntax:
+wait.until.webElment to be displayed ()
+
+
+
+real syntax for Explicit wait:
+
+
+2. Conditon      :    wait.until(ExpectedConditions.elmenttobeVisible(By.xpath("")));
+
+Not global wait
+===================================================================================================
+
+WebTables:
+Webtables are elements on the webpage, which are constructed by having
+rows and columns
+
+Types of webtables:
+1. Static webtables
+2. dynamic webtables
+
+WebTables consist of defferent sections or parts:
+<table>
+        <thead>
+                <tr>
+                    <th></th> --> column data or heading
+                </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td></td> --> table data
+                </tr>
+        </tbody>
+</table>

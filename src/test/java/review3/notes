@@ -1,0 +1,63 @@
+Why do we need waits?
+    to sync the scribe to the website(to overcome synchronization issues)
+    wait for the element to be  loaded
+    Wait for the element to fulfill the conditions( wait for the element to be clickable)
+
+Using thread.sleep-disadvantages
+    1. its still going to wait if the elememnt has been found for the mentioned duration,
+    which makes our code slower
+================================================================================================
+Implicits wait:
+    going to wait until "THE ELEMENT IS FOUND"
+        1. if the element is found, it will end the wait time and move on
+        2.if the element is not found (in duration of time out) it will return us with excetion
+
+        syntax:
+            driver.manage().timeouts().implicitlyWait(Duration.ofSecond(20))
+            timeout--Max wait time
+
+======================================================================================================
+Explicit wait:
+    When the element is not in dom and certain condition should fulfill
+        ex. waiting for a element to have a text, clickable etc
+            1. as soon as the condition is fulled it moves on to the NEXT line of code
+            2. if the condition isn't fulfilled (in the duration of time out) it will give an exception
+
+            syntax:
+                WebDriverWait wait=new WebDriverWait(driver. Duration.ofSeconds(20));
+                wait.until(ExpetedCondition."THE CONDITION FOR WHICH YOU WANT TO WAIT"(The webElement);
+                ex.
+                    wait.until(ExpectedCondition.visibilityOfElementLocated(By.xpath(//button[text()='Enabled']")));"
+
+=============================================================================================
+
+*Biggest different bettween the two*
+
+Implicits wait: is golbal wait
+
+Explicit wait: local, has to be declared for every individual element if needed
+==============================================================================================
+
+impl is not in dom
+expl is in dom, but we have a condition, that's the reason why we use the wait,
+cause the code will find it very quick, but because of condition it would not work:)
+=======================================================================================================
+When you get no such element exception:
+    your code cant find the element
+    *you have the wrong xpath/locator*
+====================================================================
+Tables:
+    <table name="company">
+
+    <thead>
+    </thead>
+
+    <tbody>
+        <tr>
+
+tr[" +(i+1)+ "]"))
+    we are adding a varible inside a string
+    (i+1) this convert to a number
+
+
+

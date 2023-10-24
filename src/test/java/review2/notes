@@ -1,0 +1,72 @@
+DropDowns:
+    1. check for the select tag
+        if present-- use select class
+        if not -- use conventional method
+
+method:
+    1. locate the element that has the select tag
+    2. create an obj of the class anbd pass in the parameter the webelement found
+    3. use method
+        .byVisibleText();
+                  .byIndex(); indexing in DD starts from 0!
+                  .byValue();
+
+============================================
+MultiSelect DD:
+    1.if the DD is multiselect or not?
+        isMultiple(); returns a boolean value
+    2. there are some advance methods available for multiDD
+        Deselect
+            DeselectByIndex();
+            DeselectByVisibleText();
+            DeselectByValue();
+
+getOptions: return all the options avaible in the dropdown
+
+========================================================================================================
+Alerts:
+
+WebBased/html:
+    we can inspect them and deal with them in a regular way
+
+WindowBased:
+    these alerts are outside the browser
+    we cant handle them using selenium
+
+JavaScript:
+    we deal with such alters using by switch the focus of the driver to the alert and then we can
+        dismiss()
+        accept()
+        getText()
+        sendKeys()
+Ex.
+    Alerts alert=driver.switchTo.alert()
+        alert.accept();
+===========================================================================================================
+Frames:
+    Switching to a frame
+    drive,switchTo.Frame(index);
+    drive,switchTo.Frame(name or id);
+    drive,switchTo.Frame(WebElemtn);
+
+=============================================
+WindowHandles:
+    every window well have a unique name
+Methods
+how to get window handle of current window
+    driver.getWindowHandle()
+to switch the focus of the webdriver to the help page
+(theres already a list)
+    1.a loop to travers to find the windown handles that we desire
+        for(a:handles){
+        1.every time a page appears- we need to switch to it to desire window
+        before you get a title switch to a
+        driver.switchto(a);
+        title=driver.getTitle();
+
+        if(title.equals("helps)){
+        break;
+        }
+
+
+        }

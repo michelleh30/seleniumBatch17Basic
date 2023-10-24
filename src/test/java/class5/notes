@@ -5,6 +5,10 @@ value & t: attribute
 here: is text
 =============================================================================================================
 DropDown:
+**Types:**
+  - **Single select**
+  - **Multi-select**
+
    - does it have a select tag?   <Select>
    if yes - use Select class in selenium to deal with it
    if no - deal with it like a normal Web Element
@@ -28,6 +32,7 @@ Multi Select DD:
            .byIndex(); indexing in DD starts from 0!
            .byValue();
 
+
         Additional methods for MultiSelectDD:
            .DeselectByIndex();
            .DeselectByVisibleText();
@@ -42,8 +47,10 @@ hw :iterate and check if equal and select
 
 Alerts:
    ALERTS/POP UPS:
+    **Description:**
+     - An alert is a popup message that halts interactions until addressed.
 
-WebBased:
+WebBased (HTML):
     are easy to handle, we do that exact same way as we do with regular web elements, we can inspect them
 
 Window based:
@@ -53,13 +60,19 @@ Java Script based alerts -
 you can only accte them
     dealt with using Alerts class in Selenium.
     you cant inspect them
-    switch your focus of the driver to the alert
+    switch your focus of the driver to the alert-- Managed using the `switchTo` method
 
-    We can with JS alerts:
-      accept();
-      dismiss();
-      sendText();
-      getText();
+JavaScript Alerts:
+  - **Varieties:**
+    1. **Simple Alert:** Click 'OK'.
+    2. **Confirmation Alert:** Choose 'Cancel' or 'OK'.
+    3. **Prompt Alert:** Provide input, then click 'OK'.
+
+ **Methods for Handling Alerts:**
+      accept(); CLick 'Ok'
+      dismiss(); Click 'Cancel'
+      sendKeys(); Input text (for prompt alerts).
+      getText(); Retrieve the alert message.
 
             Handling alerts:
 

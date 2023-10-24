@@ -1,0 +1,73 @@
+DYNAMIC TABLES
+
+
+Static table: the table whose content can't be modified by the user
+
+Dynamic: the table whose content can't be modified by the user
+
+Pagination: has multiple pages
+
+Tables divided into several pages, the navigation bar is called PAGINATION
+
+Calendars:
+    are also known as date-pickers
+======================================================
+
+How to handle Calendars:
+1. click on the calendar
+2. locate the month and get the text
+3. if the desired text is not visible --> we will keep clicking on next and keep updating text
+4. as soon as we found our desired month --> grab all cells from the table
+5. Loop through the cells
+6. once the cell value is matched with our condition --> click on the matched date
+
+=======================================================
+Advance xpath:
+    is based on parent and child, sibling relationships
+
+    1. get to the nearest approachable element/sibling
+    2. write the realtions of the desired element and the one that you have approached
+
+
+        use/following sibling::tagname to get to your desired element
+
+        syntax:
+            //tagname[@attribute='vaule']following-sibling::tagname--this is when its before
+
+            //tagname[@attribute='value']/preceding-sibiling::tagname---this is after
+
+            //tagname[@attribute='value']/child::tagname--parent child relationship
+****
+identifying elements by following sibling
+    //tagname[@attribute = 'attribute value']/following-sibling::tagname
+
+    //input[@id = 'calFromDate']/following-sibling::img
+
+identifying elements by preceding sibling
+    //tagname[@attribute = 'attribute value']/preceding-sibling::tagname
+
+    //span[text() = '& Orders']/preceding-sibling::span
+
+identifying element parents
+    //tagname[@attribute = 'attribute value']/parent::parentTagname
+
+    //span[text() = '& Orders']/parent::a
+
+
+* = select everything
+
+
+
+if (driver != null) {
+    only quiz when its initialized
+========================================================================
+CUCUMBER:
+    its a tool
+   Cucumber Framework in Selenium is an open-source testing framework that supports
+   Behavior Driven Development for automation testing of web applications.
+   Cucumber is a testing framework. It can be used with things other than Selenium
+
+
+feature files --they provide user stories
+
+====================================================================

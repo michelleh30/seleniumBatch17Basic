@@ -4,9 +4,19 @@ html formater on google to help you formate
 
 Last 2 locators
 1.Absolute Xpath:
-    reason why they done use it that much
+    It refers to the direct path from the root element to the desired element.
+    reason why they don't use it that much
     1. the path may change if any change is made in the document
     2. its too long
+
+
+Fixed Path: Starts from the root node and ends with the desired element.
+Fragility: Sensitive to changes. Any alteration in the path (like adding or removing an element) can break the XPath.
+3. Usage Scenarios
+
+Best for scenarios where the HTML structure is stable and changes are minimal.
+Not recommended for dynamic web pages where the structure is prone to changes.
+Example:
 
     ex.
     <html>
@@ -17,6 +27,22 @@ Last 2 locators
     </html>
 
 /html/body/p/  ---this is how you would write it above the code
+*******************************************************************************
+another example
+<html>
+    <body>
+        <div>
+            <p>First Paragraph</p>
+            <p>Second Paragraph</p>
+        </div>
+        <div>
+            <span>Text</span>
+        </div>
+    </body>
+</html>
+xpath to reach span
+/html/body/div[2]/span
+
 
 2. Relative Xpath
 Syntax:
@@ -29,16 +55,16 @@ Syntax:
 
 you can find an element using
 
-attribute: most common
+Attribute: most common
     we can use any attribute, provided that it doesnt have numbers, spaces, and is unique enough
 
     //tagname[@attribute='value']
 
-text: most common
+Text: most common
     the element must have text
     //tagname[text()='value']
 
-contains method:
+Contains method:
     we can use partial vaule of attribute or text. This is helpful when we have no other opinion
     and all the available attributes have either digits or spaces don't put numbers
 
@@ -46,20 +72,23 @@ contains method:
 
     text//tagname[contains(text(),'value')]
 
-startswith:
+    Benefit: Allows for partial value selection.
+    Applicability: Useful when attributes have digits or spaces or when exact values are unknown.
+
+Startswith: (Attribute and Text)
 has to begin with that value or
 
     attribute //tagname[starts-with(@attribute,'value')]
 
     test//tagname[starts-with(text(),'value')]
 
-indexing:
+Indexing:
     should be the last resort when you have no other option to select the element uniquely
 
     (xpath)[index]//tagname[@attribute='value'])[index]
 
-use of and operator: common
-    we can use and operator to specify more then one condition for our element, to locate it uniquley
+use of AND operator: common
+    we can use and operator to specify more then one condition for our elements, to locate it uniquely
 
     //tagname[@attribute='value' and @attribute='value']
 

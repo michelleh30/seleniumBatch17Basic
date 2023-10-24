@@ -7,7 +7,9 @@ and they may change in future we omitted using them
 web element commands
     sendkeys
 ************************************************
-Instend of wiriting this use shortcuts
+CSS does not allow you to access an element using its text content.
+
+Instead of writing this use shortcuts
 attribute:
      tagname[attribute='value']
 
@@ -27,18 +29,25 @@ contains:
 
 start-with:
     tagname[attribute^='value']
+    Selects elements whose attribute value starts with the specified value.
 
 Ends-with:
     tagname[attribute$='value']
+    Purpose: Selects elements whose attribute value ends with the specified value.
+
+Tips:
+
+When an attribute has digits or spaces, you can use the advanced attribute selectors to avoid the locator getting redundant.
 
 **************************************************
-web element commands
+Web element commands
+
 isSelected():
-    weather the element is selected or not
+    weather the element is selected or not  (commonly used for checkboxes, radio buttons, etc.).
     ---boolean
 
 isEnabled():
-    if the element is active or not
+    if the element is active or not(not disabled)
     ---boolean
 
 isDisplay():
@@ -51,3 +60,12 @@ isSelected and isDisplay
     enabled - can you click it
 
 ****************************************************************************
+Radiobuttons and Checkboxes
+
+Procedure to Select a Desired Radio Button:
+a. Find all the radio buttons on the web page.
+b. Store these radio buttons in a list.
+c. Loop through each radio button in the list:
+
+If the current radio button matches your desired criteria, click on it.
+If not, continue iterating through the list.
